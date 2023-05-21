@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingreso de Usuarios</title>
+  <style>
+    /* Ajustar el estilo del contenedor principal del formulario */
+    .login-container {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: url("1.jpg"); /* Agregar imagen de fondo */
+      background-size: cover; /* Ajustar tamaño de la imagen de fondo */
+    }
+
+    /* Ajustar el estilo del formulario */
+    #login-form {
+      width: 100%;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Ajustar el estilo de los campos del formulario */
+    #login-form input[type="text"], #login-form input[type="password"] {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Ajustar el estilo de los botones */
+    .btn-ingresar, .btn-registrarse {
+      padding: 0.5rem 1rem;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 1rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-ingresar:hover, .btn-registrarse:hover {
+      background: #0069d9;
+    }
+
+    .btn-registrarse {
+      background: #28a745;
+    }
+
+    .btn-registrarse:hover {
+      background: #218838;
+    }
+
+    /* Agregar estilo para el logo */
+    .logo {
+      width: 50%;
+      max-width: 200px;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-container">
+    <img src="doña.png" alt="Logo de la aplicación" class="logo"> <!-- Agregar logo -->
+    <h1>Ingreso de Usuarios</h1>
+    <form action="#" method="POST" id="login-form">
+      <label for="username">Nombre de Usuario:</label>
+      <input type="text" name="username" id="username" required>
+      <label for="password">Contraseña:</label>
+      <input type="password" name="password" id="password" required>
+      <div style="display:flex;justify-content:space-between;width:100%;">
+        <button type="submit" class="btn-ingresar" id="ingresar-btn">Ingresar</button>
+        <button type="button" class="btn-registrarse" id="registrarse-btn">Registrarse</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById('login-form');
+    const ingresarBtn = document.getElementById('ingresar-btn');
+    const registrarseBtn = document.getElementById('registrarse-btn');
+
+    loginForm.addEventListener('submit', function(event) {
+      alert('Formulario válido, enviando datos...');
+      // Aquí debes agregar el código para enviar el formulario y validar al usuario
+      // ...
+    });
+
+    registrarseBtn.addEventListener('click', function() {
+      window.location.href = "registro.html";
+    });
+  </script>
+    <!-- Pie de página con acceso a la tienda -->
+  <div class="footer">
+    <p>¿Ya tienes cuenta? <a href="tienda.html">Accede aquí</a></p>
+  </div>
+</main>
+</body>
+</html>
+
